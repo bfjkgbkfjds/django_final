@@ -1,0 +1,19 @@
+.body{
+    background: linear-gradient(#0cb7f2,  white 60% );
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+}
+
+.card{
+    border: 5px double;
+    background: linear-gradient(aquamarine, bisque );
+}
+
+.title{
+    background: linear-gradient( white, aquamarine);
+}
+
+.img{
+    border: 5px groove grey;
+}

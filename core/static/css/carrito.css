@@ -1,0 +1,27 @@
+body {
+    background-color: #212121;
+    color: #FFF;
+}
+
+.nav-img {
+    background-image: url(/assests/img/body-i.jpg);
+    background-position: center;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #212121;
+}
+
+.card-body {
+    color: #212121;
+}

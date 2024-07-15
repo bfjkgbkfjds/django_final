@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/Fondo.jpg');
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: snow;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 420px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+form .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+form h2 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 35px;
+}
+
+input {
+    padding: 17px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid royalblue;
+    margin-bottom: 30px;
+    outline: none;
+    color: black;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #89879B;
+}
+
+.btn {
+    background-color: #E53854;
+    border: 2px solid #E53854;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #E53854;
+    border: 2px solid #E53854;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 30px;
+    }
+
+    form {
+        width: 340px;
+    }
+}
+
+p {
+    font-size: 14px;
+    margin: 15px 0;
+    display: inline-block;
+    color: white;
+    padding: 5px 20px;
+}

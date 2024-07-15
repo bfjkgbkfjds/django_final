@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/stylees.css' %}">
+    <style>
+        .card-img-zoom {
+            transition: transform 0.2s;
+        }
+        
+        .card-img-zoom:hover {
+            transform: scale(1.05);
+        }
+
+        .med {
+            width: 100%;
+            height: 80rem;
+            padding-top: 5rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        .img {
+            height: 35rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pad-nav-img">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'img/body-i.jpg' %}" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'registro' %}">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'categoria' %}">Acción</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'categoria' %}">Aventura</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'categoria' %}">Super Héroes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <span class="navbar-text" id="usernameDisplay"></span>
+                        <a href="{% url 'registro' %}">
+                            <button class="btn btn-outline-success" type="submit">Registrarse</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="text-center mt-5">
+        <h1>Categorías</h1>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row med">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'img/Transformers.jpg' %}" class="card-img-top card-img-zoom img" alt="Acción">
+                    <div class="card-body">
+                        <h5 class="card-title">Acción</h5>
+                        <p class="card-text">Contenido de la categoría de Acción...</p>
+                        <a href="{% url 'categoria' %}" class="btn btn-primary">Ir a Acción</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'img/one_piece.jpg' %}" class="card-img-top card-img-zoom img" alt="Aventura">
+                    <div class="card-body">
+                        <h5 class="card-title">Aventura</h5>
+                        <p class="card-text">Contenido de la categoría de Aventura...</p>
+                        <a href="{% url 'categoria' %}" class="btn btn-primary">Ir a Aventura</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'img/vampi_01.jpg' %}" class="card-img-top card-img-zoom img" alt="Super Héroes">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Héroes</h5>
+                        <p class="card-text">Contenido de la categoría de Super Héroes...</p>
+                        <a href="{% url 'categoria' %}" class="btn btn-primary">Ir a Super Héroes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Categorías</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

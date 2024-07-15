@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del cómic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+
+</head>
+
+
+<body class="fondo">
+
+    <div class="pad nav-img bod-img">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'assets/img/body-i.jpg' %}" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'registro' %}">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">Acción</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="">Aventura</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="">Super Héroes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <span class="navbar-text" id="usernameDisplay"></span>
+                        <a href="{% url 'registro' %}">
+                            <button class="btn btn-outline-success" type="submit">Registrarse</button>
+                        </a>
+                        <a href="{% url 'carrito' %}">
+                            <button class="btn btn-outline-warning" type="submit">Carrito</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <img class="card-img-top" src="{{ comic.imagen }}" alt="{{ comic.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ comic.name }}</h5>
+                <p class="card-text">Categoría: {{ comic.categoria }}</p>
+                <p class="card-text">Precio: {{ comic.precio }}</p>
+                <p class="card-text">Stock: {{ comic.stock }}</p>
+                <a href="{% url 'carrito' %}" class="btn btn-primary">Agregar al Carrito</a>
+            </div>
+        </div>
+    </div>

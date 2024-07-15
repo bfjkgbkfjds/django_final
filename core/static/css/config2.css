@@ -1,0 +1,59 @@
+/* Estilos CSS sin comentarios */
+
+body {
+    background-color: grey;
+}
+
+.container-fluid {
+    max-width: 80%;
+    margin-top: 20px;
+    height: auto;
+    padding-bottom: 60px;
+}
+
+.carousel {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 40px auto;
+    margin-top: 40px;
+    display: block;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-mas {
+    display: block;
+    margin: 20px auto;
+}
+
+.card {
+    margin: 40px;
+}
+
+@media (max-width: 768px) {
+    .img1 {
+        width: 70%;
+    }
+}

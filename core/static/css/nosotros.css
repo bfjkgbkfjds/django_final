@@ -1,0 +1,11 @@
+.border-green {
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.centered-content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}

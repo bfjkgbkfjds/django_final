@@ -1,0 +1,46 @@
+body {
+    background-color: #212121;
+    color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: #495057;
+}
+
+.navbar-nav .nav-link.active {
+    color: #121314;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #495057;
+}
+
+.dropdown-menu .dropdown-divider {
+    margin: 0.5rem 0;
+}
+
+h2 {
+    color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
